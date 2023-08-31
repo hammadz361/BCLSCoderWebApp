@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0CF41736-0FC2-4A65-92E2-B459D3012802}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoderWebApplication</RootNamespace>
+    <AssemblyName>CoderWebApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.7.1.0\lib\net45\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CorrectedText_Process.aspx" />
+    <Content Include="CorrectedText_Summary.aspx" />
+    <Content Include="CorrectedText.aspx" />
+    <Content Include="others_recoding.aspx" />
+    <Content Include="report_grid.aspx" />
+    <Content Include="settings.aspx" />
+    <Content Include="edit_user.aspx" />
+    <Content Include="coder.aspx" />
+    <Content Include="view_codes.aspx" />
+    <Content Include="view_details.aspx" />
+    <Content Include="view_user.aspx" />
+    <Content Include="add_user.aspx" />
+    <Content Include="supervisorform.aspx" />
+    <Content Include="supervisorform3.aspx" />
+    <Content Include="supervisorform2.aspx" />
+    <Content Include="coding3.aspx" />
+    <Content Include="coding2.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="admin.aspx" />
+    <Content Include="supervisorform_old.aspx" />
+    <Content Include="supervisor.aspx" />
+    <Content Include="css\960.css" />
+    <Content Include="css\960.fluid.css" />
+    <Content Include="css\buttons.css" />
+    <Content Include="css\charts.css" />
+    <Content Include="css\forms.css" />
+    <Content Include="css\icons.css" />
+    <Content Include="css\jquery-ui-1.8.15.custom.css" />
+    <Content Include="css\lists.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\notifications.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\tables.css" />
+    <Content Include="css\typography.css" />
+    <Content Include="js\common.js" />
+    <Content Include="js\libs\jquery-1.6.2.js" />
+    <Content Include="js\libs\jquery-1.6.2.min.js" />
+    <Content Include="js\libs\modernizr-2.0.6.min.js" />
+    <Content Include="js\mylibs\excanvas.js" />
+    <Content Include="js\mylibs\jquery-ui-1.8.15.custom.min.js" />
+    <Content Include="js\mylibs\jquery.dataTables.js" />
+    <Content Include="js\mylibs\jquery.dataTables.min.js" />
+    <Content Include="js\mylibs\jquery.localscroll-1.2.7-min.js" />
+    <Content Include="js\mylibs\jquery.notifications.js" />
+    <Content Include="js\mylibs\jquery.scrollTo-1.4.2-min.js" />
+    <Content Include="js\mylibs\jquery.slidernav.js" />
+    <Content Include="js\mylibs\jquery.slidernav.min.js" />
+    <Content Include="js\mylibs\jquery.tipsy.js" />
+    <Content Include="js\mylibs\jquery.uniform.js" />
+    <Content Include="js\mylibs\jquery.uniform.min.js" />
+    <Content Include="js\mylibs\jquery.validate.js" />
+    <Content Include="js\mylibs\jquery.validate.min.js" />
+    <Content Include="js\mylibs\jquery.visualize.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\script.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="login.aspx" />
+    <Content Include="coding.aspx" />
+    <Content Include="WebForm3.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CorrectedText_Process.aspx.cs">
+      <DependentUpon>CorrectedText_Process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorrectedText_Process.aspx.designer.cs">
+      <DependentUpon>CorrectedText_Process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorrectedText_Summary.aspx.cs">
+      <DependentUpon>CorrectedText_Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorrectedText_Summary.aspx.designer.cs">
+      <DependentUpon>CorrectedText_Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorrectedText.aspx.cs">
+      <DependentUpon>CorrectedText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorrectedText.aspx.designer.cs">
+      <DependentUpon>CorrectedText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogBase.cs" />
+    <Compile Include="others_recoding.aspx.cs">
+      <DependentUpon>others_recoding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="others_recoding.aspx.designer.cs">
+      <DependentUpon>others_recoding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report_grid.aspx.cs">
+      <DependentUpon>report_grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report_grid.aspx.designer.cs">
+      <DependentUpon>report_grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_user.aspx.cs">
+      <DependentUpon>edit_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_user.aspx.designer.cs">
+      <DependentUpon>edit_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="coder.aspx.cs">
+      <DependentUpon>coder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="coder.aspx.designer.cs">
+      <DependentUpon>coder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_codes.aspx.cs">
+      <DependentUpon>view_codes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_codes.aspx.designer.cs">
+      <DependentUpon>view_codes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_details.aspx.cs">
+      <DependentUpon>view_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_details.aspx.designer.cs">
+      <DependentUpon>view_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_user.aspx.cs">
+      <DependentUpon>view_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_user.aspx.designer.cs">
+      <DependentUpon>view_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_user.aspx.cs">
+      <DependentUpon>add_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_user.aspx.designer.cs">
+      <DependentUpon>add_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisorform.aspx.cs">
+      <DependentUpon>supervisorform.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisorform.aspx.designer.cs">
+      <DependentUpon>supervisorform.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisorform3.aspx.cs">
+      <DependentUpon>supervisorform3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisorform3.aspx.designer.cs">
+      <DependentUpon>supervisorform3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisorform2.aspx.cs">
+      <DependentUpon>supervisorform2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisorform2.aspx.designer.cs">
+      <DependentUpon>supervisorform2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="coding3.aspx.cs">
+      <DependentUpon>coding3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="coding3.aspx.designer.cs">
+      <DependentUpon>coding3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="coding2.aspx.cs">
+      <DependentUpon>coding2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="coding2.aspx.designer.cs">
+      <DependentUpon>coding2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisorform_old.aspx.cs">
+      <DependentUpon>supervisorform_old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisorform_old.aspx.designer.cs">
+      <DependentUpon>supervisorform_old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="supervisor.aspx.cs">
+      <DependentUpon>supervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="supervisor.aspx.designer.cs">
+      <DependentUpon>supervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="coding.aspx.cs">
+      <DependentUpon>coding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="coding.aspx.designer.cs">
+      <DependentUpon>coding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\File_Shamu.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile3.pubxml" />
+    <None Include="Properties\PublishProfiles\HH.pubxml" />
+    <None Include="Properties\PublishProfiles\hh_mac.pubxml" />
+    <None Include="Properties\PublishProfiles\KP-CLS.pubxml" />
+    <None Include="Properties\PublishProfiles\sham2.pubxml" />
+    <None Include="Properties\PublishProfiles\shamu.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59592</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59592/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
