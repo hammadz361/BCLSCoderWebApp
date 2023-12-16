@@ -54,11 +54,12 @@ namespace CoderWebApplication
 
                 SqlCommand cmd = new SqlCommand("load_uncoded_rejected_new", con);
                 cmd.Parameters.Add(new SqlParameter("@type", "1"));
+                cmd.Parameters.Add(new SqlParameter("@userid", Session["userID"]));
                 cmd.CommandType = CommandType.StoredProcedure;
                 da = new SqlDataAdapter(cmd);
                 //LogBase.log(Server.MapPath("~/" + DateTime.Now.ToString("d MMM yyyy") + ".txt").ToString(), "Uncoded_jected_new", cmd, Session["userID"].ToString());
                 logtext = logtext + "\n" + LogBase.logging(Server.MapPath("~/" + DateTime.Now.ToString("d MMM yyyy") + ".txt").ToString(), "Load_uncoded_rejected", cmd, Session["userID"].ToString());
-               
+                
                 da.Fill(ds);
                 con.Open();
                 cmd.ExecuteNonQuery();

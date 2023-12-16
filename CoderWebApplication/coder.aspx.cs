@@ -32,6 +32,7 @@ namespace CoderWebApplication
                 StringBuilder htmlTable = new StringBuilder();
                 con.ConnectionString = @conn;
                 SqlCommand cmd2 = new SqlCommand("Summary_user_det", con);
+                var userID = Session["userID"].ToString();
                 cmd2.CommandType = CommandType.StoredProcedure;
                 cmd2.Parameters.Add(new SqlParameter("@userid", Session["userID"]));
                 da = new SqlDataAdapter(cmd2);
@@ -43,6 +44,7 @@ namespace CoderWebApplication
                     GridView1.DataBind();
                 SqlCommand cmd = new SqlCommand("Count_uncoded_rejected", con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@userid", Session["userID"]));
                 da2 = new SqlDataAdapter(cmd);
                 da2.Fill(ds);
                 con.Open();
